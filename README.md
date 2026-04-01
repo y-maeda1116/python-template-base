@@ -1,11 +1,11 @@
 # Python Template Base
 
-Python 3.13 の最小限テンプレートプロジェクト。CLI/スクリプト開発に最適化。
+Python 3.13+ の最小限テンプレートプロジェクト。CLI/スクリプト開発に最適化。
 
 ## 特徴
 
-- **Python 3.13** + [uv](https://docs.astral.sh/uv/) によるパッケージ管理
-- **Ruff** (lint/format), **mypy** (型チェック), **pytest** (テスト)
+- **Python 3.13+** + [uv](https://docs.astral.sh/uv/) によるパッケージ管理
+- **Ruff** (lint/format), **mypy** (型チェック strict mode), **pytest** (テスト + カバレッジ)
 - **GitHub Actions** CI/CD (lint, type-check, test, security scan)
 - セキュリティワークフローは [security-base](https://github.com/y-maeda1116/security-base) で一元管理
 
@@ -35,6 +35,8 @@ uv run ruff format --check .
 ├── python_template_base/
 │   └── __init__.py
 ├── tests/
+│   ├── __init__.py
+│   └── test_smoke.py
 ├── pyproject.toml
 └── uv.lock
 ```
@@ -55,7 +57,9 @@ uv run ruff format --check .
 | [uv](https://docs.astral.sh/uv/) | パッケージ管理・実行 |
 | [Ruff](https://docs.astral.sh/ruff/) | Lint + Format |
 | [mypy](https://mypy.readthedocs.io/) | 型チェック (strict mode) |
-| [pytest](https://docs.pytest.org/) | テスト |
+| [pytest](https://docs.pytest.org/) | テスト + カバレッジ |
+| [pytest-cov](https://pytest-cov.readthedocs.io/) | テストカバレッジ |
+| [pip-audit](https://pip-audit.readthedocs.io/) | 依存関係セキュリティスキャン |
 
 ## License
 
