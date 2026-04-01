@@ -17,3 +17,7 @@ htmlcov/
 .env.*.local
 .venv/
 venv/
+
+# AI development artifacts
+.claude/
+docs/superpowers/
