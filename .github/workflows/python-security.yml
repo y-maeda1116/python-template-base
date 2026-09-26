@@ -11,7 +11,7 @@ permissions:
 jobs:
   python-security:
     name: Python Security Check
-    uses: y-maeda1116/security-base/.github/workflows/reusable-py-security.yml@main
+    uses: ./.github/workflows/reusable-py-security.yml
     with:
       python-version: "3.13"
       bandit-target: "python_template_base"
